@@ -1,0 +1,55 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#clicker {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 310px;
+  height: 458px;
+  z-index: 100;
+}
+
+#finger {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(75%, 200%);
+  z-index: 200;
+  pointer-events: none;
+}
+
+.fingerSlideIn {
+  animation: slidein 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+.fingerSlideOut {
+  animation: slideout 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    transform: translate(75%, 200%);
+  }
+
+  to {
+    transform: translate(75%, -20%);
+  }
+}
+
+@keyframes slideout {
+  from {
+    transform: translate(75%, -20%);
+  }
+
+  to {
+    transform: translate(75%, 200%);
+  }
+}

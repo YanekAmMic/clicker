@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tobias Hunde Klicker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <img
+      id="clicker"
+      src="clicker.jpg"
+      onmouseover="mouseOver()"
+      onmouseout="mouseOut()"
+    />
+    <img id="finger" src="finger.png" />
+    <script src="script.js"></script>
+  </body>
+  <script>
+    var audio = new Audio("click.mp3");
+    $("#clicker").click(function () {
+      audio.play();
+    });
+  </script>
+</html>
